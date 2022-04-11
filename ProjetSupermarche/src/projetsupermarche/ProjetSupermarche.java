@@ -91,12 +91,29 @@ public class ProjetSupermarche {
                 System.out.println("2: Temps total pour un employé");
                 System.out.println("3: Temps moyen travaillé par l'ensemble des employés");
                 System.out.println("0: Quitter le programme");
+                choice = sc.nextInt();
             }while(choice < 0 || choice > 3);
             
             switch(choice)
             {
                 case 1:
-                    
+                    for(Secteur s : secteurList)
+                    {
+                        System.out.println("Id secteur = " + s.getIdSecteur() + " Nom secteur = " + s.getNomSecteur());
+                        System.out.println("/////////////////////////////////////////////////////////////////////////");
+                        for(Rayon r : s.getLesRayons())
+                        {
+                            System.out.println("Id Rayon = " + r.getIdRayon()+ " Nom Rayon = " + r.getNomRayon());
+                            System.out.println("*************************************************************************");
+                            for(Travailler t : r.getLesTravailler())
+                            {
+                                System.out.println("Id Employé = " + t.getUnEmploye().getIdEmploye() + " Nom Employé = " + t.getUnEmploye().getNomEmploye());
+                                System.out.println("Temps Passé = " + t.getTempsPasse());
+                                System.out.println("-----------------------------------------------------------------------------------");
+                                
+                            }
+                        }
+                    }
                     break;
                 case 2:
                     break;
