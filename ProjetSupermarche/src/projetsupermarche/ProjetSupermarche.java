@@ -116,8 +116,46 @@ public class ProjetSupermarche {
                     }
                     break;
                 case 2:
+                    System.out.println("Saisir le numéro de l'employé");
+                    int idEmploye = 0;
+                    Scanner sc2 = new Scanner(System.in);
+                    idEmploye = sc2.nextInt();
+                    int tempsTotal = 0;
+                    for(Secteur s : secteurList)
+                    {
+                        for(Rayon r : s.getLesRayons())
+                        {
+                            for (Travailler t : r.getLesTravailler())
+                            {
+                                if (t.getUnEmploye().getIdEmploye() == idEmploye)
+                                {
+                                    tempsTotal = tempsTotal + t.getTempsPasse();
+                                }
+                            }
+                        }
+                    }
+                    System.out.println("Temps total travaillé par l'employe n°5 est de = " + tempsTotal);
                     break;
                 case 3:
+                    double tempsMoyen = 0;
+                    double temps = 0;
+                    double nbEmploye = 0;
+                    for (Secteur s : secteurList)
+                    {
+                        for(Rayon r : s.getLesRayons())
+                        {
+                            for (Travailler t : r.getLesTravailler())
+                            {
+                                if (t.getUnEmploye().getIdEmploye() > nbEmploye)
+                                {
+                                    nbEmploye = t.getUnEmploye().getIdEmploye();
+                                }
+                                temps = temps + t.getTempsPasse();
+                            }
+                        }
+                    }
+                    tempsMoyen = temps/nbEmploye;
+                    System.out.println("Temps moyen travaillé par l'ensemble des employés est de = " + tempsMoyen);
                     break;
                 case 0:
                     System.out.println("FIN DU PROGRAMME");
