@@ -54,9 +54,29 @@ public class ProjetSupermarche {
         
         ArrayList<Secteur> secteurList = new ArrayList<Secteur>();
         
+        ray1.addTravailler(trav1);
+        ray1.addTravailler(trav2);
+        ray1.addTravailler(trav3);
+        ray2.addTravailler(trav4);
+        ray2.addTravailler(trav5);
+        ray3.addTravailler(trav6);
+        ray3.addTravailler(trav7);
+        ray3.addTravailler(trav8);
+        ray4.addTravailler(trav9);
+        ray4.addTravailler(trav10);
+        ray4.addTravailler(trav11);
+        ray5.addTravailler(trav1);
+        ray5.addTravailler(trav3);
+        ray5.addTravailler(trav5);
         
+        sect1.addRayon(ray1);
+        sect1.addRayon(ray2);
+        sect1.addRayon(ray3);
+        sect2.addRayon(ray4);
+        sect2.addRayon(ray5);
         
-        
+        secteurList.add(sect1);
+        secteurList.add(sect2);
         
         
         
