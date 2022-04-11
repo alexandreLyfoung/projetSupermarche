@@ -146,10 +146,7 @@ public class ProjetSupermarche {
                         {
                             for (Travailler t : r.getLesTravailler())
                             {
-                                if (t.getUnEmploye().getIdEmploye() > nbEmploye)
-                                {
-                                    nbEmploye = t.getUnEmploye().getIdEmploye();
-                                }
+                                nbEmploye += 1;
                                 temps = temps + t.getTempsPasse();
                             }
                         }
