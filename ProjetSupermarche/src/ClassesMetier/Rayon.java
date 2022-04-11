@@ -36,4 +36,9 @@ public class Rayon {
     {
         return this.lesTravailler;
     }
+    
+    public void addTravailler(Travailler t)
+    {
+        lesTravailler.add(t);
+    }
 }

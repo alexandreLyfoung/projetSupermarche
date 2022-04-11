@@ -36,4 +36,9 @@ public class Secteur {
     {
         return this.lesRayons;
     }
+    
+    public void addRayon(Rayon r)
+    {
+        lesRayons.add(r);
+    }
 }
